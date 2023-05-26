@@ -6,9 +6,10 @@
 </head>
 <body>
     <script>
-        fetch('https://github.com/taencoding/dataVisualization/blob/main/data.json')
+        fetch('https://raw.githubusercontent.com/taencoding/dataVisualization/main/data.json')
         .then(data => data.json())
         .then(data => {
+            const body = document.querySelector('body')
             const orderPopulation = document.createElement('ol')
             for (const i of data) {
                 const local = document.createElement('li')
